@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+--Tomato: hsl(4, 100%, 67%);
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Charcoal-Grey);
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+#mobile{
+    display: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.one{
+    display: flex;
+    justify-content: center;
+    background-color: var(--White);
+    padding: 22px;
+    padding-left :50px;
+    border-radius: 1rem;
+    gap: 50px;
+}
+.two{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 400px;
+    border-radius: 1.5rem;
+    justify-content: center;
+    background-color: var(--White);
+    color: var(--Dark-Slate-Grey);
+}
+.hidden{
+    display: none;
+}
+p{
+    font-size: 16px;
+    width: 90%;
+    line-height: 25px;
+}
+ul{
+    margin-left: -20px;
+    list-style-image: url(assets/images/icon-list.svg);
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    color: var(--Charcoal-Grey);
+}
+li{
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+h1{
+    font-size: 45px;
+}
+li span{
+    top: -5px;
+    position: relative;
+    left: 2px;
+}
+input,button{
+    height: 50px;
+    border-radius: 0.5rem;
+    border: none;
+    font-family: "Roboto", sans-serif;
+ 
+}
+input{
+    outline: var(--Grey);
+    border: 1.5px solid var(--Grey);
+    padding-left: 20px;
+
+}
+#text{
+    width: 100px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+}
+#error{
+    font-size: 12px;
+    width: 120px;
+    color: tomato;
+    font-family: "Roboto", sans-serif;
+}
+.error{
+    border:1px solid tomato;
+    background-color: pink;
+}
+.error::placeholder{
+    color: tomato;
+}
+input{
+    margin-top: -15px;
+}
+#subscribe{
+    margin-top: 25px;
+}
+.small{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content:space-between;
+    
+}
+button{
+    font-weight: 700;
+    font-size: 16px;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+}
+button:hover{
+    background:linear-gradient( to right, rgb(252, 99, 125), var(--Tomato));
+    cursor: pointer;
+}
+@media (max-width:400px){
+.one{
+    height: 100vh;
+}
+}
+@media (max-width:500px) {
+    .one{
+        flex-direction: column-reverse;
+        padding-top: 0px;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        padding-left: 0px;
+        align-items: left;
+        justify-content: left;
+        gap: 0;
+        border-radius:0;
+    }
+    body{
+        align-items: left;
+        justify-content: left;
+    }
+    #desktop{
+        display: none;
+    }
+    #mobile{
+        display: block;
+    }
+    .left{
+        padding-left: 20px;
+        padding-top: 20px;
+        width: 90%;
+        padding-bottom: 20px;
+        border-radius: 0;
+    }
+    .two{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        border-radius: 0rem;
+        padding-right: 0px;
+        align-items: center;
+    }
+    .two p, .two h1,.two button{
+        width: 80vw;
+    }
+
+}
