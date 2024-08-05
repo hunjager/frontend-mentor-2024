@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Blue: hsl(223, 87%, 63%);
+}
+*{
+    font-family: "Libre Franklin", sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.illustration{
+    margin-top: 70px;
+}
+.illustration img{
+    width: 40vw;
+}
+p{
+    margin-top: -10px;
+    font-size: 16px;
+    color: var(--Very-Dark-Blue);
+}
+h1{
+    font-size: 45px;
+    color: var(--Gray);
+    font-weight: 300;
+}
+h1 span{
+    font-weight: 700;
+    color:var(--Very-Dark-Blue);
+}
+.input{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;;
+}
+#error{
+    color:var(--Light-Red);
+    font-weight: 300;
+    font-size: 12px;
+}
+.error{
+    display: grid;
+    gap: 5px;
+}
+input{
+    width: 300px;
+    padding-left: 20px;
+    height: 35px;
+    border-radius: 1.5rem;
+    border: none;
+    outline: 1px solid var(--Pale-Blue);
+}
+input::placeholder{
+    color:var(--Pale-Blue);
+}
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 1.5rem;
+    background-color: var(--Blue);
+    border: none;
+    color: white;
+    font-weight: 600;
+    box-shadow: hsl(223, 87%, 63%) 0px 3px 7px 0px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: hsla(223, 87%, 63%, 0.9);
+
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 14px;
+    color: var(--Gray);
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    left: 0; 
+    padding-bottom: 10px;
+}
+.logos{
+    display: flex;
+    gap: 15px;
+}
+.logos svg{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.356);
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    fill: var(--Blue);
+}
+.logos svg:hover{
+    fill: white;
+    background-color:var(--Blue) ;
+    border: none;
+    cursor: pointer;
+}
+@media (max-width:600px){
+    body{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    .input{
+        display: grid;
+    }
+    input{
+        width: 50vw;
+    }
+    button{
+        width: 55vw;
+    }
+    .illustration img{
+        width: 80vw;
+    }
+    h1{
+        font-size: 7vw;
+    }
+   
+}
+@media(min-width:600px) and (max-width:1000px){
+    .illustration img{
+        width: 70vw;
+    }
+}
